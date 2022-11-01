@@ -1,0 +1,303 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* header----*/
+
+
+header {
+  background-color: transparent;
+  width: 90%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  position: fixed;
+  z-index: 100;
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: black;
+}
+
+
+
+.navbar-links {
+  width: 100%;
+  display: none;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-links li {
+  list-style: none;
+  font-size: 15px;
+ 
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  
+  display: block;
+}
+
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.navbar-links.active {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  filter: drop-shadow(1px 1px  10px rgb(172, 172, 172));
+}
+
+i {
+  color: white;
+}
+
+i:hover {
+  color: orangered;
+  cursor: pointer;
+}
+
+
+
+video {
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+
+
+.socials {
+  width: 47%;
+  display: block;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+i + i, .fa-facebook {
+  margin-left: 12px;
+  font-size: 24px;
+}
+
+.header-club {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 6px 20px;
+  max-width: 80px;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 9px;
+  font-weight: 700;
+}
+
+
+.header-club:hover {
+  color: white;
+  border-color: orangered;
+  background-color: orangered;
+}
+
+.home-btn {
+  color: white;
+  padding: 2px 15px;
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 20px;
+  padding: 6px 20px;
+  max-width: 80px;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 9px;
+  font-weight: 700;
+}
+
+.home-btn:hover {
+  color: white;
+  border-color: white;
+  background-color: transparent;
+}
+
+
+
+
+@media(min-width: 625px) {
+
+
+  .toggle-button {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-links  {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navbar-links ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar-links.active {
+    flex-direction: row;
+  }
+
+  .socials {
+    width: 6%;
+    display: flex;
+    justify-content: right;
+  }
+
+  .header-club {
+    margin-left: 14px;
+  }
+  
+  
+
+  
+}
+/*---------------header-----------*/
+
+
+/*----------animations------------*/
+
+.hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(60%);
+  transition: all 700ms;
+}
+
+
+.hidden2 {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(-60%);
+  transition: all 700ms;
+}
+
+.hidden3 {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateY(-50%);
+  transition: all 1.3s;
+}
+
+
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+/*--------------animations------------------*/
+
+
+/*---------main---------------*/
+
+body {
+  background-color: black;
+  
+}
+
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section2 {
+  margin-top: 70px;
+}
+
+.section2 img {
+  width: 80%;
+  max-width: 500px;
+  display: block;
+  margin-inline: auto;
+}
+
+.text {
+  color: white;
+  max-width: 440px;
+  display: block;
+  margin-inline: auto;
+}
+
+.text .section2-p {
+  font-weight: 400;
+}
+
+.text .section2-h {
+  font-size: clamp(2.15rem, 2.5rem, 3.2rem);
+  color: orangered;
+  font-weight: 700;
+}
+
+@media (min-width: 900px) {
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
+/*---------------main-------------*/
+  
+
+
+
