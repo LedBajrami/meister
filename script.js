@@ -24,3 +24,22 @@ const hiddenElements3 = document.querySelectorAll('.hidden3')
 hiddenElements.forEach((el) => observer.observe(el))
 hiddenElements2.forEach((el) => observer.observe(el))
 hiddenElements3.forEach((el) => observer.observe(el))
+
+
+
+
+//collapbsibleTable
+let coll = document.getElementsByClassName("collapsible-button");
+let i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
