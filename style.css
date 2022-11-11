@@ -449,7 +449,13 @@ input::placeholder {
     justify-content: space-between;
     align-items: center;
   }
-
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  
   .div {
     display: flex;
     justify-content: space-between;
