@@ -4,10 +4,6 @@ html {
   overflow-x: hidden;
 }
 
-.section3 {
-max-width: 1280px
-}  
-
 body {
   text-align: center;
   overflow-x: hidden;
@@ -23,7 +19,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  position: fixed;
+  
   z-index: 100;
 }
 
@@ -106,6 +102,7 @@ video {
   position: relative;
   height: auto;
   pointer-events: none;
+  display: none;
 }
 
 
@@ -178,50 +175,29 @@ i + i, .fa-facebook {
   color: orangered;
 }
 
-
-
-@media(min-width: 865px) {
-
-
-  .toggle-button {
-    display: none;
-  }
-
-  .navbar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .navbar-links  {
-    display: flex;
-    width: 100%;
-    align-items: center;
-  }
-
-  .navbar-links ul {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .navbar-links.active {
-    flex-direction: row;
-  }
-
-  .socials {
-    width: 6%;
-    display: flex;
-    justify-content: right;
-  }
-
-  .header-club {
-    margin-left: 14px;
-  }
-  
-  
-
-  
+a {
+  position: relative;
 }
+
+a::after {
+  content: " ";
+  position: absolute;
+  background-color: orangered;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+
+
+  
+
 /*---------------header-----------*/
 
 
@@ -258,12 +234,11 @@ hr {
 
 
 .collapsible-button {
-  background-color: rgb(46, 45, 45);
+  background-color: rgb(24, 24, 24);
   color: gray;
   cursor: pointer;
   padding: 5px;
-  width: 100%;
-  max-width: 300px;
+  width: 93%;
   border-bottom: 1px solid white;
   display: flex;
   align-items: center;
@@ -311,14 +286,13 @@ hr {
 }
 
 .content {
-  padding: 0 18px;
-  width: 50%;
+  width: 93%;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color:  rgb(46, 45, 45);
+  background-color:  rgb(24, 24, 24);
   color: white;
-  margin-block: 10px;
+  margin-bottom: 10px;
 }
 
 /*---------------------- collapsible table ------------------------*/
@@ -380,6 +354,22 @@ body {
   margin: 0 auto;
 }
 
+
+
+.first-seperator {
+  display: none;
+}
+
+@media(min-width: 687px) and (max-width: 900px) {
+  .column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 28%;
+  }
+}
+
+
 .row2 {
   display: flex;
   align-items: center;
@@ -425,17 +415,23 @@ body {
   width: 100%;
 }
 
+
 input {
   background-color: transparent;
   color: white;
   border: 1px solid white;
   padding: 20px 30px;
   margin: 5px;
+  max-width: 410px;
 }
 
 input::placeholder {
   color: white;
   padding: 12px;
+}
+
+.long-inputs-form > input{
+  width: 170px;
 }
 
 .section6 button{
@@ -447,19 +443,71 @@ input::placeholder {
   justify-content: center;
 }
 
+
+
+@media (min-width: 555px) {
+  video {
+    display: block;
+  }
+
+  .long-inputs-form > input{
+    width: 470px;
+  }
+
+}
+
+
+@media(min-width: 865px) {
+
+
+  .toggle-button {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-links  {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navbar-links ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar-links.active {
+    flex-direction: row;
+  }
+
+  .socials {
+    width: 6%;
+    display: flex;
+    justify-content: right;
+  }
+
+  .header-club {
+    margin-left: 14px;
+  }
+
+}
+
+
+
+
+
 @media (min-width: 900px) {
   .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  
+
   .div {
     display: flex;
     justify-content: space-between;
@@ -467,10 +515,12 @@ input::placeholder {
     width: 100%;
     margin: 0 auto;
   }
+
   
-
+  .long-inputs-form > input{
+    width: 470px;
+  }
 }
-
 
 
 
@@ -480,6 +530,7 @@ input::placeholder {
 
 /*---------------main-------------*/
   
+
 
 
 
